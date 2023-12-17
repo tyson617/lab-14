@@ -1,1 +1,83 @@
 /* TODO: Make it awesome */
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Additional Styling for Specific Elements */
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #fc0;
+}
+
+section img:hover {
+  transform: scale(1.1);
+}
+
+/* Style for the canvas element in chart.html */
+#chart-section {
+  text-align: center;
+}
+
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  nav li {
+    display: block;
+    margin-bottom: 10px;
+  }
+}

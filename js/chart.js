@@ -11,6 +11,39 @@ let canvasElem = document.getElementById('chart')
  *
  */
 function renderChart() {
+  let state = new AppState()
+  state.loadItems();
+
+  let productNames = state.allProducts.map(product => product.name);
+  let clickData = state.allProducts.map(product => product.timesClicked);
+  let showData = state.allProducts.map(product => product.timesShown);
+
+  let data = {
+    labels: productNames,
+    datasets: [
+      {
+        label: 'Votes',
+        data: clickData,
+        backgroundColor: 'rgba(75,192,192,0.4)',
+        borderColor: 'rgba(75,192,192,1)',
+        borderWidth: 1,
+      },
+      {
+        label: 'Views',
+        data: showData,
+        backgroundColor: 'rgba(198,230,160,0.4)',
+        borderColor: 'rgfa(198,230,160,1)',
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  let config = {
+    type: 'bar',
+    data: data,
+  };
+
+  new Chart(canvasElem, config);
 }
 
 renderChart();
