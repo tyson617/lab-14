@@ -33,7 +33,6 @@ AppState.prototype.loadItems = function () {
     } else {
       this.instantiateProducts();
     }
-  // this.instantiateProducts();
 }
 
 
